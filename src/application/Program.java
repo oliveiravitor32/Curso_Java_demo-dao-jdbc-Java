@@ -18,8 +18,8 @@ public class Program {
 		
 		System.out.println("----- TEST 1: seller findById -----");
 		Seller seller = sellerDao.findById(3);
-		
 		System.out.println(seller);
+		
 		
 		System.out.println("\n----- TEST 2: seller findByDepartment -----");
 		Department department = new Department(2, null);
@@ -27,6 +27,7 @@ public class Program {
 		for(Seller sel : sellers) {
 			System.out.println(sel);
 		}
+		
 		
 		System.out.println("\n----- TEST 3: seller findAll -----");
 		sellers = sellerDao.findAll();
@@ -48,8 +49,9 @@ public class Program {
 		sellerDao.update(seller);
 		System.out.println("Updated seller: " + seller);
 		
-		System.out.println("\n----- TEST 5: seller delete -----");
-		System.out.println("Enter id for delete test: ");
+		
+		System.out.println("\n----- TEST 6: seller delete -----");
+		System.out.print("Enter id for delete test: ");
 		int id = sc.nextInt();
 		sellerDao.deleteById(id);
 		System.out.println("Seller deleted!");
